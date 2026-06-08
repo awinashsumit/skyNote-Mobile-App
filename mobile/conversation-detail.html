@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>skyNote · Best Practices and OE Sync</title>
+  <link rel="stylesheet" href="../app.css" />
+  <link rel="stylesheet" href="../skynote.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body data-theme="light" data-mback="conversations.html" data-mtitle="Meeting">
+  <div class="m-app">
+    <div class="m-content">
+      <h1 style="font-size:var(--fs-600);line-height:var(--lh-600);font-weight:var(--weight-semibold);">Best Practices and OE Sync</h1>
+      <div class="row" style="gap:var(--space-s);margin-top:var(--space-s);flex-wrap:wrap;">
+        <span class="status is-recorded"><span class="dot"></span> Completed</span>
+        <span class="muted" style="font-size:var(--fs-200);">1 Jun · 38:47 · 21 people</span>
+      </div>
+      <a class="btn btn-primary" href="skyagent.html?meeting=best-practices-oe-sync" style="width:100%;justify-content:center;margin-top:var(--space-m);"><span class="btn-icon" data-icon="Sparkle"></span> Ask skyAgent</a>
+      <div class="row" style="gap:var(--space-s);margin-top:var(--space-s);">
+        <button class="btn btn-secondary" style="flex:1;justify-content:center;"><span class="btn-icon" data-icon="Share"></span> Share</button>
+        <button class="btn btn-secondary" style="flex:1;justify-content:center;"><span class="btn-icon" data-icon="Wand"></span> Run skill</button>
+        <button class="btn btn-secondary" data-sheet="moreActions" style="flex:0 0 auto;"><span class="btn-icon" data-icon="More Horizontal"></span></button>
+      </div>
+
+      <!-- Recording -->
+      <div class="vplayer" style="margin-top:var(--space-l);">
+        <div class="vp-stage">
+          <div class="vp-stats">
+            <span class="vp-stat"><b>38:47</b><span>Dur</span></span>
+            <span class="vp-stat"><b>21</b><span>People</span></span>
+            <span class="vp-stat"><b>17</b><span>Voices</span></span>
+            <span class="vp-stat"><b>5,286</b><span>Words</span></span>
+          </div>
+          <div class="vp-grid">
+            <div class="vp-tile"><span class="avatar">VR</span><span class="vp-name">Vishal R.</span></div>
+            <div class="vp-tile"><span class="avatar">KB</span><span class="vp-name">Kishore B.</span></div>
+            <div class="vp-tile"><span class="avatar">SS</span><span class="vp-name">Sangham S.</span></div>
+            <div class="vp-tile"><span class="avatar">SJ</span><span class="vp-name">Sai Jhade</span></div>
+            <div class="vp-tile"><span class="avatar">AV</span><span class="vp-name">Arun VS</span></div>
+            <div class="vp-tile"><span class="avatar">+12</span><span class="vp-name">12 more</span></div>
+          </div>
+        </div>
+        <div class="vp-transport">
+          <button class="play-btn" id="vpPlay" aria-label="Play"><span data-icon="Play" data-size="16" data-variant="f"></span></button>
+          <span class="vp-time">0:00 / 38:46</span>
+          <span class="spacer"></span>
+          <span class="vp-ic" data-icon="Speaker 2"></span>
+          <span class="vp-vol"></span>
+          <span class="vp-speed">1x</span>
+          <span class="vp-ic" data-icon="Full Screen Maximize"></span>
+        </div>
+      </div>
+
+      <div class="m-tabs" style="margin:var(--space-l) 0 var(--space-m);">
+        <button class="m-pill is-active" data-mtab="overview">Overview</button>
+        <button class="m-pill" data-mtab="transcript">Transcript</button>
+        <button class="m-pill" data-mtab="people">People</button>
+        <button class="m-pill" data-mtab="activity">Activity</button>
+      </div>
+
+      <!-- OVERVIEW -->
+      <div data-mpanel="overview">
+        <div class="m-stack">
+          <section class="m-card">
+            <div class="ov-h"><span data-icon="Document Text"></span> Summary</div>
+            <p style="color:var(--fg-secondary);font-size:var(--fs-300);">The team reviewed progress across product lines, focusing on DDAG readiness and connector development. SkyVoice went live and is monitored for lead-sync issues. The team aligned on timelines and stressed keeping customer data out of non-production.</p>
+            <div class="chips" style="margin-top:var(--space-m);"><span class="chip-ts"><span class="ts">0:04</span> DDAG Readiness</span><span class="chip-ts"><span class="ts">10:51</span> SkyMDM</span></div>
+          </section>
+          <section class="m-card">
+            <div class="ov-h"><span data-icon="Sparkle"></span> Key takeaways</div>
+            <ul class="takeaways"><li><b>DDAG strategy.</b> Prioritize a file-share sync over a direct connector for the initial landing zone.</li><li><b>SkyVoice go-live.</b> 900 calls in week one; a lead-sync issue with Dazos to resolve next.</li><li><b>Environment separation.</b> Use production sandboxes for testing, never land PHI in non-production.</li></ul>
+          </section>
+          <section class="m-card">
+            <div class="card-head"><span class="ch-icon" data-icon="Task List Square Ltr"></span><span class="ch-title" style="font-size:var(--fs-400);">Action items</span><span class="ch-count">0 / 10</span></div>
+            <div class="ai-item" style="padding-left:0;"><label class="checkbox"><input type="checkbox" /></label> Veeramani to update the status spreadsheet and share with Kishore.</div>
+            <div class="ai-item" style="padding-left:0;"><label class="checkbox"><input type="checkbox" /></label> Arun to build and test the SMB sync in a dummy environment by Tuesday.</div>
+            <div class="ai-item" style="padding-left:0;"><label class="checkbox"><input type="checkbox" /></label> Sandhru to complete the SkyMdm DataBricks setup by Monday.</div>
+          </section>
+        </div>
+      </div>
+
+      <!-- TRANSCRIPT -->
+      <div data-mpanel="transcript" hidden>
+        <div class="m-tbar">
+          <button class="btn btn-subtle"><span class="btn-icon" data-icon="Search" data-size="16"></span> Find</button>
+          <button class="btn btn-subtle"><span class="btn-icon" data-icon="Edit" data-size="16"></span> Edit</button>
+          <button class="btn btn-subtle"><span class="btn-icon" data-icon="Cut" data-size="16"></span> Snippet</button>
+        </div>
+        <span class="m-tcount">245 turns · 17 voices</span>
+        <div class="row" style="gap:var(--space-s);align-items:center;margin-bottom:var(--space-s);">
+          <span class="ch-count">01</span> <b style="font-size:var(--fs-300);">DDAC Readiness and File Syncing</b> <span class="muted num" style="font-size:var(--fs-200);">0:04</span>
+        </div>
+        <section class="m-card">
+          <div class="t-turn"><span class="t-time">0:04</span><div><div class="t-spk">Yaswanthram Ponnada</div><div class="t-text">hello good morning</div></div></div>
+          <div class="t-turn"><span class="t-time">0:07</span><div><div class="t-spk">Sai Jhade</div><div class="t-text">hey good morning everyone</div></div></div>
+          <div class="t-turn"><span class="t-time">0:11</span><div><div class="t-spk">Kishore Bhattacharjee</div><div class="t-text">good morning, let's give people a minute to join</div></div></div>
+          <div class="t-turn"><span class="t-time">0:49</span><div><div class="t-spk">Sai Jhade</div><div class="t-text">okay, let's get started with the DDAC readiness review</div></div></div>
+          <div class="t-turn is-current"><span class="t-time">1:04</span><div><div class="t-spk">Kishore Bhattacharjee</div><div class="t-text">update the spreadsheet, I need to send a status report and a gantt chart</div></div></div>
+        </section>
+      </div>
+
+      <!-- PEOPLE -->
+      <div data-mpanel="people" hidden>
+        <section class="m-card">
+          <div class="ov-h"><span data-icon="People"></span> Share of voice</div>
+          <div class="sov-bar"><span style="width:29%;background:var(--chart-1);"></span><span style="width:15%;background:var(--chart-2);"></span><span style="width:12%;background:var(--chart-3);"></span><span style="width:10%;background:var(--chart-4);"></span><span style="width:34%;background:var(--fg-disabled);"></span></div>
+          <div class="spk-row"><span class="spk-dot" style="background:var(--chart-1);"></span><div><div class="spk-name">Kishore B. <span class="tag tag-active">Most active</span></div><div class="spk-sub">8:59 · 169 wpm</div></div><span class="spk-pct">29%</span></div>
+          <div class="spk-row"><span class="spk-dot" style="background:var(--chart-2);"></span><div><div class="spk-name">Veeramani M.</div><div class="spk-sub">4:32 · 158 wpm</div></div><span class="spk-pct">15%</span></div>
+          <div class="spk-row"><span class="spk-dot" style="background:var(--fg-disabled);"></span><div><div class="spk-name">15 other speakers</div><div class="spk-sub">Combined</div></div><span class="spk-pct">56%</span></div>
+        </section>
+      </div>
+
+      <!-- ACTIVITY -->
+      <div data-mpanel="activity" hidden>
+        <div class="message-bar" style="margin-bottom:var(--space-m);"><span class="mb-icon" data-icon="Info"></span> Recording diagnostics. Useful when a capture looks wrong.</div>
+        <section class="m-card">
+          <div class="ev-row"><span class="ev-time">0:00</span><span class="ev-type">Joining call</span></div>
+          <div class="ev-row"><span class="ev-time">0:00</span><span class="ev-type">In call, recording</span></div>
+          <div class="ev-row"><span class="ev-dot"></span><span class="ev-time">0:01</span><span class="ev-actor">Yaswanthram Ponnada</span><span class="ev-type">joined</span></div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- More actions sheet (matches the web ⋯ menu) -->
+  <div class="m-sheet-ov" id="moreActions" hidden><div class="m-sheet">
+    <div class="m-sheet-handle"></div>
+    <div class="m-sheet-head"><span class="m-sheet-title">Best Practices and OE Sync</span><button class="m-iconbtn" data-close data-icon="Dismiss" data-size="20" style="color:var(--fg-secondary);"></button></div>
+    <div class="m-menu">
+      <a class="m-menu-row" href="channels.html"><span data-icon="Number Symbol" data-size="20"></span> Assign to channel</a>
+      <button class="m-menu-row"><span data-icon="Options" data-size="20"></span> Activity &amp; logs</button>
+      <button class="m-menu-row"><span data-icon="Arrow Sync" data-size="20"></span> Re-run AI</button>
+      <button class="m-menu-row"><span data-icon="Folder" data-size="20"></span> Move to folder</button>
+      <button class="m-menu-row"><span data-icon="Video" data-size="20"></span> Download audio / video</button>
+      <button class="m-menu-row"><span data-icon="Document Text" data-size="20"></span> Download transcript (.txt)</button>
+      <button class="m-menu-row"><span data-icon="Document Text" data-size="20"></span> Download summary (.md)</button>
+      <button class="m-menu-row is-danger"><span data-icon="Delete" data-size="20"></span> Delete conversation</button>
+    </div>
+  </div></div>
+
+  <script src="../assets/icons.js"></script>
+  <script src="mobile-app.js"></script>
+</body>
+</html>

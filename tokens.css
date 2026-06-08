@@ -1,0 +1,231 @@
+/* ============================================================
+   Skypoint Design System — extracted from Figma
+   File: 5xuO8U641IYNB7NttP7OFH (Fluent 2 base, Skypoint brand)
+   Brand: amber-gold #FFB31C · Type: Segoe UI ramp
+   Usage: <html data-theme="light"> (default) or data-theme="dark"
+   ============================================================ */
+
+:root {
+  /* ---- Brand ramp (Skypoint amber-gold) ---- */
+  --brand-10: #241a06;
+  --brand-20: #382808;
+  --brand-40: #5e430c;
+  --brand-primary: #ffb31c;   /* Brand/Background/1/Rest */
+  --brand-hover:   #f5c462;
+  --brand-soft:    #fcf6eb;    /* Brand/Background/2/Rest (light) */
+  --brand-soft-2:  #faeccf;
+  --brand-soft-3:  #fad996;
+  --brand-tint:    #fae3b4;
+
+  /* ---- Typography ---- */
+  --font-base: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: Consolas, "SF Mono", Menlo, monospace;
+  --font-numeric: Aptos, var(--font-base);
+
+  --weight-light: 300;
+  --weight-semilight: 350;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --fs-100: 10px;  --lh-100: 14px;
+  --fs-200: 12px;  --lh-200: 16px;
+  --fs-300: 14px;  --lh-300: 20px;   /* body default */
+  --fs-400: 16px;  --lh-400: 22px;
+  --fs-500: 20px;  --lh-500: 28px;
+  --fs-600: 24px;  --lh-600: 32px;
+  --fs-700: 28px;  --lh-700: 36px;
+  --fs-800: 32px;  --lh-800: 40px;
+  --fs-900: 40px;  --lh-900: 52px;
+  --fs-1000: 68px; --lh-1000: 92px;
+
+  /* ---- Spacing (horizontal == vertical) ---- */
+  --space-none: 0;
+  --space-xxs: 2px;
+  --space-xs: 4px;
+  --space-snudge: 6px;
+  --space-s: 8px;
+  --space-mnudge: 10px;
+  --space-m: 12px;
+  --space-l: 16px;
+  --space-xl: 20px;
+  --space-xxl: 24px;
+  --space-xxxl: 32px;
+
+  /* ---- Corner radius ---- */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-circular: 9999px;
+
+  /* ---- Stroke width ---- */
+  --stroke-thin: 1px;
+  --stroke-thick: 2px;
+  --stroke-thicker: 3px;
+  --stroke-thickest: 4px;
+
+  /* ---- Elevation / shadows ---- */
+  --shadow-2:  0 0 2px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.14);
+  --shadow-4:  0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.14);
+  --shadow-8:  0 0 2px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.14);
+  --shadow-16: 0 0 2px rgba(0,0,0,.12), 0 8px 16px rgba(0,0,0,.14);
+  --shadow-28: 0 0 8px rgba(0,0,0,.20), 0 14px 28.8px rgba(0,0,0,.24);
+  --shadow-64: 0 0 8px rgba(0,0,0,.20), 0 32px 64px rgba(0,0,0,.24);
+}
+
+/* ============================================================
+   THEME — LIGHT (default)
+   ============================================================ */
+:root,
+:root[data-theme="light"] {
+  /* Surfaces */
+  --bg-canvas: #f5f5f5;        /* Background/3 — app canvas */
+  --bg-surface: #ffffff;       /* Background/1 — cards/panels */
+  --bg-surface-hover: #f5f5f5;
+  --bg-surface-pressed: #e0e0e0;
+  --bg-surface-selected: #e0e0e0;
+  --bg-subtle: #fafafa;        /* Background/2 */
+  --bg-subtle-hover: #f0f0f0;
+  --bg-muted: #f0f0f0;         /* Background/4 */
+  --bg-inverted: #292929;
+  --bg-disabled: #f0f0f0;
+  --bg-overlay: rgba(0,0,0,.40);
+  --bg-emphasis: #e6e6e6;      /* Background/6 — progress track */
+  --bg-stencil: #e6e6e6;       /* Skeleton / stencil */
+
+  /* Foreground / text */
+  --fg-primary: #242424;       /* Foreground/1 */
+  --fg-secondary: #424242;     /* Foreground/2 */
+  --fg-tertiary: #616161;      /* Foreground/3 */
+  --fg-subtle: #707070;        /* Foreground/4 */
+  --fg-disabled: #bdbdbd;
+  --fg-on-brand: #ffffff;
+  --fg-on-accent: #ffffff;
+
+  /* Strokes */
+  --stroke-default: #d1d1d1;   /* Stroke/1 */
+  --stroke-subtle: #e0e0e0;    /* Stroke/2 */
+  --stroke-faint: #f0f0f0;     /* Stroke/3 */
+  --stroke-accessible: #616161;
+  --stroke-focus: #000000;
+
+  /* Brand (semantic) */
+  --accent: #ffb31c;
+  --accent-hover: #f5c462;
+  --accent-bg-soft: #fcf6eb;
+  --accent-fg: #ffb31c;        /* brand text/link on light */
+
+  /* Status — Danger */
+  --danger-bg: #fdf3f4;
+  --danger-fg: #b10e1c;
+  --danger-accent: #c50f1f;
+  --danger-stroke: #eeacb2;
+  /* Status — Success */
+  --success-bg: #f1faf1;
+  --success-fg: #0e700e;
+  --success-accent: #107c10;
+  --success-stroke: #9fd89f;
+  /* Status — Warning */
+  --warning-bg: #fff9f5;
+  --warning-fg: #bc4b09;
+  --warning-accent: #f7630c;
+  --warning-stroke: #fdcfb4;
+
+  /* ---- Data-viz categorical ramp ----
+     Ordered, perceptually balanced, cool-biased. The amber hue band is
+     deliberately omitted so brand amber stays the only warm signal and never
+     competes with a chart series. Use in order; cap a chart at 8 series. */
+  --chart-1: #4f6bed;   /* indigo */
+  --chart-2: #0ea5a5;   /* teal */
+  --chart-3: #e24a8b;   /* rose */
+  --chart-4: #6ba539;   /* green */
+  --chart-5: #8b5cf6;   /* violet */
+  --chart-6: #1592c4;   /* cyan */
+  --chart-7: #c24fd0;   /* magenta */
+  --chart-8: #2c7a6b;   /* deep teal-green */
+  --chart-grid: var(--stroke-faint);
+  --chart-axis: var(--fg-subtle);
+}
+
+/* ============================================================
+   THEME — DARK
+   ============================================================ */
+:root[data-theme="dark"] {
+  --bg-canvas: #141414;        /* Background/3 */
+  --bg-surface: #292929;       /* Background/1 */
+  --bg-surface-hover: #3d3d3d;
+  --bg-surface-pressed: #1f1f1f;
+  --bg-surface-selected: #383838;
+  --bg-subtle: #1f1f1f;        /* Background/2 */
+  --bg-subtle-hover: #333333;
+  --bg-muted: #0a0a0a;         /* Background/4 */
+  --bg-inverted: #ffffff;
+  --bg-disabled: #141414;
+  --bg-overlay: rgba(0,0,0,.50);
+  --bg-emphasis: #333333;
+  --bg-stencil: #575757;
+
+  --fg-primary: #ffffff;
+  --fg-secondary: #d6d6d6;
+  --fg-tertiary: #adadad;
+  --fg-subtle: #999999;
+  --fg-disabled: #5c5c5c;
+  --fg-on-brand: #ffffff;
+  --fg-on-accent: #242424;
+
+  --stroke-default: #666666;
+  --stroke-subtle: #525252;
+  --stroke-faint: #3d3d3d;
+  --stroke-accessible: #adadad;
+  --stroke-focus: #ffffff;
+
+  --accent: #ffb31c;
+  --accent-hover: #f5c462;
+  --accent-bg-soft: #382808;
+  --accent-fg: #ffb31c;
+
+  --danger-bg: #3b0509;
+  --danger-fg: #dc626d;
+  --danger-accent: #c50f1f;
+  --danger-stroke: #c50f1f;
+  --success-bg: #052505;
+  --success-fg: #54b054;
+  --success-accent: #107c10;
+  --success-stroke: #107c10;
+  --warning-bg: #4a1e04;
+  --warning-fg: #f98845;
+  --warning-accent: #f7630c;
+  --warning-stroke: #de590b;
+
+  /* Data-viz categorical ramp — brightened for contrast on dark surfaces */
+  --chart-1: #7b91ff;
+  --chart-2: #2bc4c4;
+  --chart-3: #ff6fa8;
+  --chart-4: #8fc65a;
+  --chart-5: #a98bff;
+  --chart-6: #44b4e0;
+  --chart-7: #d98bea;
+  --chart-8: #4fb39e;
+  --chart-grid: var(--stroke-faint);
+  --chart-axis: var(--fg-subtle);
+}
+
+/* ============================================================
+   Type ramp helpers (Fluent 2 named styles)
+   ============================================================ */
+.t-caption2        { font-size: var(--fs-100); line-height: var(--lh-100); font-weight: var(--weight-regular); }
+.t-caption2-strong { font-size: var(--fs-100); line-height: var(--lh-100); font-weight: var(--weight-semibold); }
+.t-caption1        { font-size: var(--fs-200); line-height: var(--lh-200); font-weight: var(--weight-regular); }
+.t-caption1-strong { font-size: var(--fs-200); line-height: var(--lh-200); font-weight: var(--weight-semibold); }
+.t-body1           { font-size: var(--fs-300); line-height: var(--lh-300); font-weight: var(--weight-regular); }
+.t-body1-strong    { font-size: var(--fs-300); line-height: var(--lh-300); font-weight: var(--weight-semibold); }
+.t-body2           { font-size: var(--fs-400); line-height: var(--lh-400); font-weight: var(--weight-regular); }
+.t-subtitle1       { font-size: var(--fs-500); line-height: var(--lh-500); font-weight: var(--weight-semibold); }
+.t-title3          { font-size: var(--fs-600); line-height: var(--lh-600); font-weight: var(--weight-semibold); }
+.t-title2          { font-size: var(--fs-700); line-height: var(--lh-700); font-weight: var(--weight-semibold); }
+.t-title1          { font-size: var(--fs-800); line-height: var(--lh-800); font-weight: var(--weight-semibold); }
+.t-large-title     { font-size: var(--fs-900); line-height: var(--lh-900); font-weight: var(--weight-semibold); }
+.t-display         { font-size: var(--fs-1000); line-height: var(--lh-1000); font-weight: var(--weight-semibold); }

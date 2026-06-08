@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>skyNote · Insights</title>
+  <link rel="stylesheet" href="../app.css" />
+  <link rel="stylesheet" href="../skynote.css" />
+  <link rel="stylesheet" href="mobile.css" />
+  <script src="../assets/chart.umd.min.js"></script>
+  <script src="../assets/chart-theme.js"></script>
+</head>
+<body data-theme="light" data-mback="home.html" data-mtitle="Insights">
+  <div class="m-app">
+    <div class="m-content">
+      <span class="dropdown" style="min-width:150px;margin-bottom:var(--space-m);">Last 90 days <span class="dropdown-chevron" data-icon="Chevron Down"></span></span>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-m);">
+        <section class="m-card kpi-card"><span class="kpi-label">Task completion</span><div class="kpi-value is-success" style="font-size:var(--fs-600);">38%</div><span class="kpi-delta up"><span data-icon="Chevron Up" data-size="12"></span> 6 pts</span></section>
+        <section class="m-card kpi-card"><span class="kpi-label">Meetings captured</span><div class="kpi-value" style="font-size:var(--fs-600);">23</div><span class="kpi-delta down"><span data-icon="Chevron Down" data-size="12"></span> 23%</span></section>
+        <section class="m-card kpi-card"><span class="kpi-label">Hours recorded</span><div class="kpi-value" style="font-size:var(--fs-600);">14.2h</div></section>
+        <section class="m-card kpi-card"><span class="kpi-label">Overdue</span><div class="kpi-value is-warning" style="font-size:var(--fs-600);">4</div></section>
+      </div>
+
+      <section class="m-card" style="margin-top:var(--space-l);">
+        <div class="ch-title" style="font-size:var(--fs-400);">Are tasks getting done?</div>
+        <div class="chart-q">Created vs completed each month</div>
+        <div style="position:relative;height:220px;margin-top:var(--space-s);"><canvas id="c1"></canvas></div>
+      </section>
+      <section class="m-card" style="margin-top:var(--space-l);">
+        <div class="ch-title" style="font-size:var(--fs-400);">Who drives the conversation?</div>
+        <div class="chart-q">Share of voice across all meetings</div>
+        <div style="position:relative;height:260px;margin-top:var(--space-s);"><canvas id="c2"></canvas></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="../assets/icons.js"></script>
+  <script src="mobile-app.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      if (!window.Chart || !window.SkypointChartTheme) return;
+      var t = SkypointChartTheme.apply(Chart), p = t.palette;
+      new Chart(document.getElementById('c1'), { type: 'bar', data: { labels: ['Mar', 'Apr', 'May', 'Jun'], datasets: [{ label: 'Created', data: [9, 18, 30, 6], backgroundColor: p[0], borderRadius: 3, maxBarThickness: 18 }, { label: 'Completed', data: [7, 12, 20, 2], backgroundColor: p[3], borderRadius: 3, maxBarThickness: 18 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: t.legendBottom }, scales: t.scales() } });
+      new Chart(document.getElementById('c2'), { type: 'doughnut', data: { labels: ['Kishore B.', 'Veeramani M.', 'Jai Shanker', 'Arun VS', 'Other'], datasets: [{ data: [29, 15, 12, 10, 34], backgroundColor: [p[0], p[1], p[2], p[3], t.neutral], borderColor: t.surface, borderWidth: 2 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '60%', plugins: { legend: t.legendBottom } } });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>skyNote · Meetings</title>
+  <link rel="stylesheet" href="../app.css" />
+  <link rel="stylesheet" href="../skynote.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body data-theme="light" data-mpage="conversations" data-mtitle="Meetings">
+  <div class="m-app">
+    <div class="m-content">
+      <div class="search-wide" style="margin-bottom:var(--space-m);"><span data-icon="Search" data-size="16"></span><input placeholder="Search meetings..." /></div>
+
+      <div class="m-tabs" style="margin-bottom:var(--space-m);">
+        <button class="m-pill is-active" data-mtab="all">All <span style="opacity:.7;">22</span></button>
+        <button class="m-pill" data-mtab="scheduled">Scheduled</button>
+        <button class="m-pill" data-mtab="live">Live <span style="opacity:.7;">1</span></button>
+        <button class="m-pill" data-mtab="shared">Shared</button>
+        <button class="m-pill" data-mtab="failed">Failed</button>
+      </div>
+
+      <!-- ALL -->
+      <div data-mpanel="all">
+        <div class="m-eyebrow" style="margin-bottom:var(--space-s);">Last week</div>
+        <div class="m-stack">
+          <a class="m-row" href="conversation-detail.html"><span class="mr-body"><span class="mr-title">Best Practices and OE Sync</span><span class="mr-sub">Sai Kiran Jhade · 21 people</span><span class="mr-meta"><span class="status is-recorded"><span class="dot"></span> Recorded</span><span class="meta-chip"><span data-icon="Clock" data-size="14"></span> 39m</span></span></span><span class="muted num" style="font-size:var(--fs-200);">Jun 1</span></a>
+        </div>
+        <div class="m-eyebrow" style="margin:var(--space-l) 0 var(--space-s);">May 2026</div>
+        <div class="m-stack">
+          <a class="m-row" href="conversation-detail.html"><span class="mr-body"><span class="mr-title">Best Practices and OE Sync</span><span class="mr-sub">Sai Kiran Jhade · 21 people</span><span class="mr-meta"><span class="status is-recorded"><span class="dot"></span> Recorded</span><span class="meta-chip"><span data-icon="Clock" data-size="14"></span> 29m</span></span></span><span class="muted num" style="font-size:var(--fs-200);">May 29</span></a>
+          <a class="m-row" href="conversation-detail.html"><span class="mr-body"><span class="mr-title">skyNote Demo - Make Every Meeting Smarter</span><span class="mr-sub">Pratham Sinha · 13 people</span><span class="mr-meta"><span class="status is-recorded"><span class="dot"></span> Recorded</span><span class="meta-chip"><span data-icon="Clock" data-size="14"></span> 21m</span></span></span><span class="muted num" style="font-size:var(--fs-200);">May 28</span></a>
+          <a class="m-row" href="conversation-detail.html"><span class="mr-body"><span class="mr-title">Cascadia skySupport check-in</span><span class="mr-sub">Pratham Sinha · 4 people</span><span class="mr-meta"><span class="status is-recorded"><span class="dot"></span> Recorded</span><span class="meta-chip"><span data-icon="Clock" data-size="14"></span> 20m</span></span></span><span class="muted num" style="font-size:var(--fs-200);">May 28</span></a>
+          <a class="m-row" href="conversation-detail.html"><span class="mr-body"><span class="mr-title">New Perspective / Skypoint - skyComply Review</span><span class="mr-sub">Sumit Awinash · 6 people</span><span class="mr-meta"><span class="status is-recorded"><span class="dot"></span> Recorded</span><span class="meta-chip"><span data-icon="Clock" data-size="14"></span> 42m</span></span></span><span class="muted num" style="font-size:var(--fs-200);">May 26</span></a>
+        </div>
+      </div>
+
+      <!-- SCHEDULED -->
+      <div data-mpanel="scheduled" hidden>
+        <div class="empty-tile" style="margin-top:var(--space-m);">
+          <span class="et-art" data-icon="Calendar Ltr" data-size="24"></span>
+          <h3>No upcoming meetings</h3>
+          <p>Toggle auto-join on a calendar meeting, or change your default policy in Settings.</p>
+          <a class="btn btn-primary" href="settings.html">Open settings</a>
+        </div>
+      </div>
+
+      <!-- LIVE -->
+      <div data-mpanel="live" hidden>
+        <div class="m-eyebrow" style="margin-bottom:var(--space-s);">In flight</div>
+        <a class="m-row" href="live.html"><span class="mr-body"><span class="mr-title">Manual launch</span><span class="mr-sub">Microsoft Teams · 2 participants</span><span class="mr-meta"><span class="live-pill"><span class="ld"></span> Recording</span></span></span><span class="muted num" style="font-size:var(--fs-200);">0:32</span></a>
+      </div>
+
+      <!-- SHARED -->
+      <div data-mpanel="shared" hidden>
+        <div class="m-stack">
+          <a class="m-row" href="conversation-detail.html"><span class="mr-body"><span class="mr-title">Best Practices and OE Sync</span><span class="mr-sub">Sai Kiran Jhade · 21 people</span><span class="mr-meta"><span class="status is-recorded"><span class="dot"></span> Recorded</span></span></span><span class="muted num" style="font-size:var(--fs-200);">Jun 1</span></a>
+          <a class="m-row" href="conversation-detail.html"><span class="mr-body"><span class="mr-title">skyNote Demo - Make Every Meeting Smarter</span><span class="mr-sub">Pratham Sinha · 13 people</span><span class="mr-meta"><span class="status is-recorded"><span class="dot"></span> Recorded</span></span></span><span class="muted num" style="font-size:var(--fs-200);">May 28</span></a>
+        </div>
+      </div>
+
+      <!-- FAILED -->
+      <div data-mpanel="failed" hidden>
+        <div class="empty-tile" style="margin-top:var(--space-m);"><span class="et-art" data-icon="Checkmark Circle" data-size="24" style="color:var(--success-accent);"></span><h3>No failed recordings</h3><p>Anything that could not be joined or transcribed shows up here to retry.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/icons.js"></script>
+  <script src="mobile-app.js"></script>
+</body>
+</html>

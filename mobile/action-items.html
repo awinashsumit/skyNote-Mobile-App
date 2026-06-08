@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>skyNote · Tasks</title>
+  <link rel="stylesheet" href="../app.css" />
+  <link rel="stylesheet" href="../skynote.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body data-theme="light" data-mpage="action-items" data-mtitle="Action items">
+  <div class="m-app">
+    <div class="m-content">
+      <div class="m-tabs" style="margin-bottom:var(--space-m);">
+        <button class="m-pill is-active" data-mtab="review">Needs review <span style="opacity:.7;">8</span></button>
+        <button class="m-pill" data-mtab="todo">To do <span style="opacity:.7;">4</span></button>
+        <button class="m-pill" data-mtab="done">Done <span style="opacity:.7;">3</span></button>
+      </div>
+
+      <!-- NEEDS REVIEW -->
+      <div data-mpanel="review">
+        <div class="triage-bar" style="margin-bottom:var(--space-m);"><span class="tb-icon" data-icon="Sparkle"></span><span style="font-size:var(--fs-200);"><b>8 items</b> have a suggested owner and date. Confirm to track.</span></div>
+        <div class="m-stack">
+          <div class="m-card">
+            <div class="mr-title" style="white-space:normal;">Swastik Dash to implement Figma suggestions for the Sky Command dashboard today.</div>
+            <div class="mr-sub">Best Practices and OE Sync · Jun 1</div>
+            <div class="rev-suggest" style="margin-top:var(--space-s);"><span class="suggest-label">Suggested</span><span class="suggest"><span class="savatar">SD</span> Swastik Dash</span><span class="suggest"><span data-icon="Calendar Ltr" data-size="14"></span> Today</span></div>
+            <button class="btn btn-secondary" style="width:100%;justify-content:center;margin-top:var(--space-m);">Accept</button>
+          </div>
+          <div class="m-card">
+            <div class="mr-title" style="white-space:normal;">Sandhru Duraisamy to schedule the MDM deep-dive demo for Deloitte by Monday.</div>
+            <div class="mr-sub">Best Practices and OE Sync · Jun 1</div>
+            <div class="rev-suggest" style="margin-top:var(--space-s);"><span class="suggest-label">Suggested</span><span class="suggest"><span class="savatar">SD</span> Sandhru Duraisamy</span><span class="suggest"><span data-icon="Calendar Ltr" data-size="14"></span> Mon</span></div>
+            <button class="btn btn-secondary" style="width:100%;justify-content:center;margin-top:var(--space-m);">Accept</button>
+          </div>
+          <div class="m-card">
+            <div class="mr-title" style="white-space:normal;">Anish Reddy to send a status update on the ECW write API to Rachel.</div>
+            <div class="mr-sub">Best Practices and OE Sync · Jun 1</div>
+            <div class="rev-suggest" style="margin-top:var(--space-s);"><span class="suggest-label">Suggested</span><span class="suggest"><span class="savatar">AR</span> Anish Reddy</span></div>
+            <button class="btn btn-secondary" style="width:100%;justify-content:center;margin-top:var(--space-m);">Accept</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TO DO -->
+      <div data-mpanel="todo" hidden>
+        <div class="group-head" style="padding-left:0;"><span class="gh-dot is-overdue"></span><span class="gh-label">Overdue</span><span class="gh-count">1</span></div>
+        <div class="m-card">
+          <div class="mr-title" style="white-space:normal;">Finalize the HiTrust evidence package for Amin.</div>
+          <div class="row" style="gap:var(--space-s);margin-top:var(--space-s);flex-wrap:wrap;"><span class="prio is-high"><span class="pdot"></span> High</span><span class="dt-assignee"><span class="avatar is-sm">VM</span> Veeramani</span><span class="dt-due is-overdue"><span data-icon="Calendar Ltr" data-size="14"></span> Jun 6</span></div>
+        </div>
+        <div class="group-head" style="padding-left:0;"><span class="gh-dot is-today"></span><span class="gh-label">Today</span><span class="gh-count">1</span></div>
+        <div class="m-card">
+          <div class="mr-title" style="white-space:normal;">Send the Q2 onboarding deck to Lisa.</div>
+          <div class="row" style="gap:var(--space-s);margin-top:var(--space-s);flex-wrap:wrap;"><span class="prio is-medium"><span class="pdot"></span> Medium</span><span class="dt-assignee"><span class="avatar is-sm">SA</span> Sumit</span><span class="dt-due"><span data-icon="Calendar Ltr" data-size="14"></span> Today</span></div>
+        </div>
+        <div class="group-head" style="padding-left:0;"><span class="gh-dot is-week"></span><span class="gh-label">This week</span><span class="gh-count">2</span></div>
+        <div class="m-card">
+          <div class="mr-title" style="white-space:normal;">Complete the SkyMdm DataBricks setup for Deloitte access.</div>
+          <div class="row" style="gap:var(--space-s);margin-top:var(--space-s);flex-wrap:wrap;"><span class="prio is-medium"><span class="pdot"></span> Medium</span><span class="dt-assignee"><span class="avatar is-sm">SD</span> Sandhru</span><span class="dt-due"><span data-icon="Calendar Ltr" data-size="14"></span> Jun 10</span></div>
+        </div>
+      </div>
+
+      <!-- DONE -->
+      <div data-mpanel="done" hidden>
+        <div class="m-stack">
+          <div class="m-card"><div class="mr-title is-done" style="white-space:normal;text-decoration:line-through;color:var(--fg-tertiary);">Work on test</div><div class="row" style="gap:var(--space-s);margin-top:var(--space-s);"><span class="prio is-medium"><span class="pdot"></span> Medium</span><span class="dt-assignee"><span class="avatar is-sm">SA</span> Sumit</span></div></div>
+          <div class="m-card"><div class="mr-title is-done" style="white-space:normal;text-decoration:line-through;color:var(--fg-tertiary);">Kishore to review the resourcing plan and reply to Tisson.</div><div class="mr-sub">OE Sync 11th May · May 11</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/icons.js"></script>
+  <script src="mobile-app.js"></script>
+</body>
+</html>

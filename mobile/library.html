@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>skyNote · Library</title>
+  <link rel="stylesheet" href="../app.css" />
+  <link rel="stylesheet" href="../skynote.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body data-theme="light" data-mback="home.html" data-mtitle="Library">
+  <div class="m-app">
+    <div class="m-content">
+      <div class="m-tabs" style="margin-bottom:var(--space-m);">
+        <button class="m-pill is-active" data-mtab="skills">Skills</button>
+        <button class="m-pill" data-mtab="memory">Memory</button>
+        <button class="m-pill" data-mtab="snippets">Snippets</button>
+      </div>
+
+      <div data-mpanel="skills">
+        <button class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:var(--space-m);"><span class="btn-icon" data-icon="Add"></span> New skill</button>
+        <div class="m-stack">
+          <section class="m-card"><div class="sk-top"><span class="sk-name">Executive brief</span><label class="switch"><input type="checkbox" checked /></label></div><div class="sk-desc">A tight summary for leadership: outcomes, decisions, risks.</div><div class="sk-foot"><span class="runmode on-demand">On demand</span><span class="spacer"></span><button class="btn btn-subtle"><span class="btn-icon" data-icon="Play" data-variant="f"></span> Run</button></div></section>
+          <section class="m-card"><div class="sk-top"><span class="sk-name">Standard summary</span><label class="switch"><input type="checkbox" checked /></label></div><div class="sk-desc">Overview, key points, and action items. The default.</div><div class="sk-foot"><span class="runmode auto">Auto on every meeting</span><span class="spacer"></span><button class="btn btn-subtle"><span class="btn-icon" data-icon="Play" data-variant="f"></span> Run</button></div></section>
+          <section class="m-card"><div class="sk-top"><span class="sk-name">Sales summary</span><label class="switch"><input type="checkbox" checked /></label></div><div class="sk-desc">BANT, objections, and next steps for deal reviews.</div><div class="sk-foot"><span class="runmode on-demand">On demand</span><span class="spacer"></span><button class="btn btn-subtle"><span class="btn-icon" data-icon="Play" data-variant="f"></span> Run</button></div></section>
+        </div>
+      </div>
+
+      <div data-mpanel="memory" hidden>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:var(--space-m);"><span class="btn-icon" data-icon="Add"></span> Add memory</button>
+        <section class="m-card">
+          <div class="mem-row" style="padding-top:0;"><span class="mem-type-col"><span class="mem-type">Fact</span></span><div class="mem-body"><div class="mem-text">Standard pricing is $499 per seat per year.</div><div class="mem-src">Added manually</div></div></div>
+          <div class="mem-row"><span class="mem-type-col"><span class="mem-type">Person</span></span><div class="mem-body"><div class="mem-text">Kishore leads engineering and owns DDAG.</div><div class="mem-src">From OE Sync, 1 Jun</div></div></div>
+          <div class="mem-row"><span class="mem-type-col"><span class="mem-type">Glossary</span></span><div class="mem-body"><div class="mem-text">DDAG = Deloitte Data Acquisition Gateway.</div><div class="mem-src">Added manually</div></div></div>
+        </section>
+      </div>
+
+      <div data-mpanel="snippets" hidden>
+        <div class="m-stack">
+          <section class="m-card"><div class="snip-quote">"only pending part is setting up the sftp credentials"</div><div class="snip-meta">Veeramani Murugesan</div><a class="cite" href="conversation-detail.html" style="margin-top:var(--space-s);">Best Practices and OE Sync <span class="ts">1:33</span></a></section>
+          <section class="m-card"><div class="snip-quote">"SkyVoice processed 900 calls in its first week"</div><div class="snip-meta">Kishore Bhattacharjee</div><a class="cite" href="conversation-detail.html" style="margin-top:var(--space-s);">Best Practices and OE Sync <span class="ts">8:12</span></a></section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/icons.js"></script>
+  <script src="mobile-app.js"></script>
+</body>
+</html>

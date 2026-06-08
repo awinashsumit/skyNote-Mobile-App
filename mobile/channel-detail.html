@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>skyNote · Deloitte Integration</title>
+  <link rel="stylesheet" href="../app.css" />
+  <link rel="stylesheet" href="../skynote.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body data-theme="light" data-mback="channels.html" data-mtitle="Channel">
+  <div class="m-app">
+    <div class="m-content">
+      <div class="row" style="gap:var(--space-m);"><span class="ch-icon-tile" data-icon="Briefcase" data-size="22" style="--cc:var(--chart-2);"></span><div><h1 style="font-size:var(--fs-500);font-weight:var(--weight-semibold);">Deloitte Integration</h1><div class="muted" style="font-size:var(--fs-200);">5 members · 8 meetings</div></div></div>
+
+      <div class="m-tabs" style="margin:var(--space-l) 0 var(--space-m);">
+        <button class="m-pill is-active" data-mtab="convs">Meetings</button>
+        <button class="m-pill" data-mtab="members">Members</button>
+        <button class="m-pill" data-mtab="settings">Settings</button>
+      </div>
+
+      <div data-mpanel="convs">
+        <div class="rule-banner" style="margin-bottom:var(--space-m);"><span class="rb-icon" data-icon="Arrow Sync"></span><div style="font-size:var(--fs-200);"><b>Auto-adding the OE Sync series.</b> 6 of 8 added automatically.</div></div>
+        <div class="m-stack">
+          <a class="m-row" href="conversation-detail.html"><span class="mr-body"><span class="mr-title">Best Practices and OE Sync</span><span class="mr-sub">Jun 1 · 21 attendees</span></span><span class="tag tag-quiet">Auto</span></a>
+          <a class="m-row" href="conversation-detail.html"><span class="mr-body"><span class="mr-title">Best Practices and OE Sync</span><span class="mr-sub">May 29 · 21 attendees</span></span><span class="tag tag-quiet">Auto</span></a>
+        </div>
+      </div>
+
+      <div data-mpanel="members" hidden>
+        <div class="m-stack">
+          <div class="m-row"><span class="avatar is-sm">SA</span><span class="mr-body"><span class="mr-title">Sumit Awinash (you)</span><span class="mr-sub">Owner</span></span></div>
+          <div class="m-row"><span class="avatar is-sm">SJ</span><span class="mr-body"><span class="mr-title">Sai Kiran Jhade</span><span class="mr-sub">Member</span></span></div>
+          <div class="m-row"><span class="avatar is-sm">KB</span><span class="mr-body"><span class="mr-title">Kishore Bhattacharjee</span><span class="mr-sub">Member</span></span></div>
+        </div>
+        <button class="btn btn-secondary" style="width:100%;justify-content:center;margin-top:var(--space-m);"><span class="btn-icon" data-icon="Person Add"></span> Invite member</button>
+      </div>
+
+      <div data-mpanel="settings" hidden>
+        <div class="message-bar is-warning" style="margin-bottom:var(--space-m);"><span class="mb-icon" data-icon="Warning"></span> Connect Slack or Teams in Settings to turn on delivery.</div>
+        <section class="m-card">
+          <div class="set-row" style="border-top:0;"><div class="sr-body"><div class="sr-title">Forward summaries</div><div class="sr-desc">Post the AI summary of every meeting.</div></div><label class="switch"><input type="checkbox" disabled /></label></div>
+          <div class="set-row"><div class="sr-body"><div class="sr-title">Forward action items</div><div class="sr-desc">Post the task list separately.</div></div><label class="switch"><input type="checkbox" disabled /></label></div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/icons.js"></script>
+  <script src="mobile-app.js"></script>
+</body>
+</html>

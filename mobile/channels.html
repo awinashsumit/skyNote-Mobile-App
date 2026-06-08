@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>skyNote · Channels</title>
+  <link rel="stylesheet" href="../app.css" />
+  <link rel="stylesheet" href="../skynote.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body data-theme="light" data-mback="home.html" data-mtitle="Channels">
+  <div class="m-app">
+    <div class="m-content">
+      <p class="muted" style="font-size:var(--fs-300);">Group meetings by team or project. Each channel collects its meetings and can forward summaries to Slack or Teams.</p>
+      <button class="btn btn-primary" data-sheet="newChannel" style="width:100%;justify-content:center;margin:var(--space-m) 0 var(--space-l);"><span class="btn-icon" data-icon="Add"></span> New channel</button>
+      <div class="m-stack">
+        <a class="m-row" href="channel-detail.html" style="align-items:flex-start;"><span class="ch-icon-tile" data-icon="Briefcase" data-size="22" style="--cc:var(--chart-2);"></span><span class="mr-body"><span class="mr-title">Deloitte Integration</span><span class="mr-sub">DDAG readiness and the Deloitte handoff</span><span class="mr-meta"><span class="meta-chip"><span data-icon="People" data-size="14"></span> 5</span><span class="meta-chip"><span data-icon="Chat Multiple" data-size="14"></span> 8</span><span class="muted" style="font-size:var(--fs-200);">Delivery pending</span></span></span></a>
+        <a class="m-row" href="channel-detail.html" style="align-items:flex-start;"><span class="ch-icon-tile" data-icon="People" data-size="22" style="--cc:var(--chart-4);"></span><span class="mr-body"><span class="mr-title">skyHire</span><span class="mr-sub">Recruitment platform demos and syncs</span><span class="mr-meta"><span class="meta-chip"><span data-icon="People" data-size="14"></span> 3</span><span class="meta-chip"><span data-icon="Chat Multiple" data-size="14"></span> 4</span><span class="muted" style="font-size:var(--fs-200);">Delivery off</span></span></span></a>
+        <a class="m-row" href="channel-detail.html" style="align-items:flex-start;"><span class="ch-icon-tile" data-icon="Megaphone Loud" data-size="22" style="--cc:var(--chart-7);"></span><span class="mr-body"><span class="mr-title">Marketing</span><span class="mr-sub">No description</span><span class="mr-meta"><span class="meta-chip"><span data-icon="People" data-size="14"></span> 1</span><span class="meta-chip"><span data-icon="Chat Multiple" data-size="14"></span> 1</span></span></span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="m-sheet-ov" id="newChannel" hidden><div class="m-sheet">
+    <div class="m-sheet-handle"></div>
+    <div class="m-sheet-head"><span class="m-sheet-title">New channel</span><button class="m-iconbtn" data-close data-icon="Dismiss" data-size="20"></button></div>
+    <div class="field"><label class="field-label">Name</label><input class="input" placeholder="e.g. Deloitte Integration" /></div>
+    <div class="field" style="margin-top:var(--space-m);"><label class="field-label">Color</label><div class="swatches"><span class="swatch is-active" style="background:var(--chart-1);"></span><span class="swatch" style="background:var(--chart-2);"></span><span class="swatch" style="background:var(--chart-3);"></span><span class="swatch" style="background:var(--chart-4);"></span><span class="swatch" style="background:var(--chart-5);"></span><span class="swatch" style="background:var(--chart-6);"></span></div></div>
+    <div class="field" style="margin-top:var(--space-m);"><label class="field-label">Auto-add meetings</label><span class="dropdown" style="width:100%;">From a recurring series <span class="dropdown-chevron" data-icon="Chevron Down"></span></span></div>
+    <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:var(--space-l);">Create channel</button>
+  </div></div>
+
+  <script src="../assets/icons.js"></script>
+  <script src="mobile-app.js"></script>
+</body>
+</html>

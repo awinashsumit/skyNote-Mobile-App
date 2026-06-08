@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>skyNote · Home</title>
+  <link rel="stylesheet" href="../app.css" />
+  <link rel="stylesheet" href="../skynote.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body data-theme="light" data-mpage="home">
+  <div class="m-app">
+    <div class="m-content">
+      <span class="m-eyebrow"><span class="e-dot"></span> Monday, 8 June</span>
+      <h1 class="m-greeting" style="margin-top:var(--space-xs);">Good evening,<br>Sumit</h1>
+      <p class="muted" style="font-size:var(--fs-300);margin-top:var(--space-s);">Your meetings and tasks, in one place.</p>
+
+      <!-- Primary capture -->
+      <a class="m-card" data-capture style="display:flex;align-items:center;gap:var(--space-m);margin-top:var(--space-l);background:var(--accent-bg-soft);border-color:transparent;">
+        <span class="m-lead" style="background:var(--accent);color:var(--fg-on-accent);" data-icon="Add" data-size="24"></span>
+        <span class="mr-body"><span class="mr-title">Capture a meeting</span><span class="mr-sub">Send a bot, upload, or record now</span></span>
+        <span class="m-chev" data-icon="Chevron Right" data-size="18"></span>
+      </a>
+
+      <!-- Action items -->
+      <div class="m-sectit"><span class="ch-icon" data-icon="Task List Square Ltr"></span><span class="mst-title">Action items</span><a class="link" href="action-items.html">Open hub</a></div>
+      <section class="m-card">
+        <a href="action-items.html" style="display:block;text-decoration:none;color:inherit;"><div class="mr-title" style="white-space:normal;">Crystal Cramer to send scripts to Abbas for onboarding.</div><div class="mr-sub">Wiz Call · 1 May</div></a>
+        <hr class="divider" style="margin:var(--space-m) 0;" />
+        <a href="action-items.html" style="display:block;text-decoration:none;color:inherit;"><div class="mr-title" style="white-space:normal;">Shubham to send John the setup form.</div><div class="mr-sub">GPB - skyAdvisor Call · 30 Apr</div></a>
+      </section>
+
+      <!-- Recent meetings -->
+      <div class="m-sectit"><span class="ch-icon" data-icon="Chat Multiple"></span><span class="mst-title">Recent meetings</span><a class="link" href="conversations.html">View all</a></div>
+      <div class="m-stack">
+        <a class="m-row" href="conversation-detail.html"><span class="m-lead is-muted" style="font-size:var(--fs-200);font-weight:var(--weight-semibold);">WC</span><span class="mr-body"><span class="mr-title">Wiz Call</span><span class="mr-sub">Security requirements follow-up</span><span class="mr-meta"><span class="status is-recorded"><span class="dot"></span> Recorded</span><span class="meta-chip is-accent"><span data-icon="Task List Square Ltr" data-size="14"></span> 3</span></span></span><span class="muted num" style="font-size:var(--fs-200);">1 May</span></a>
+        <a class="m-row" href="conversation-detail.html"><span class="m-lead is-muted" style="font-size:var(--fs-200);font-weight:var(--weight-semibold);">GP</span><span class="mr-body"><span class="mr-title">GPB - skyAdvisor Call</span><span class="mr-sub">John explores the Advisor product</span><span class="mr-meta"><span class="status is-recorded"><span class="dot"></span> Recorded</span><span class="meta-chip is-accent"><span data-icon="Task List Square Ltr" data-size="14"></span> 4</span></span></span><span class="muted num" style="font-size:var(--fs-200);">30 Apr</span></a>
+        <a class="m-row" href="conversation-detail.html"><span class="m-lead is-muted" style="font-size:var(--fs-200);font-weight:var(--weight-semibold);">DC</span><span class="mr-body"><span class="mr-title">Deloitte Call</span><span class="mr-sub">Sky MDM data enrichment</span><span class="mr-meta"><span class="status is-recorded"><span class="dot"></span> Recorded</span><span class="meta-chip is-accent"><span data-icon="Task List Square Ltr" data-size="14"></span> 5</span></span></span><span class="muted num" style="font-size:var(--fs-200);">29 Apr</span></a>
+      </div>
+
+      <!-- More -->
+      <div class="m-sectit"><span class="mst-title">More</span></div>
+      <div class="m-tilegrid">
+        <a class="m-tile" href="channels.html"><span class="mt-ic" data-icon="Number Symbol" data-size="22"></span> Channels</a>
+        <a class="m-tile" href="insights.html"><span class="mt-ic" data-icon="Data Trending" data-size="22"></span> Insights</a>
+        <a class="m-tile" href="library.html"><span class="mt-ic" data-icon="Library" data-size="22"></span> Library</a>
+      </div>
+
+      <!-- Ask skyAgent -->
+      <section class="m-card" style="margin-top:var(--space-xxl);background:var(--accent-bg-soft);border-color:var(--stroke-faint);">
+        <div class="card-head"><span class="ch-icon" data-icon="Sparkle"></span><span class="ch-title" style="font-size:var(--fs-500);">Ask skyAgent</span></div>
+        <p class="muted" style="font-size:var(--fs-200);margin-bottom:var(--space-m);">Cross-meeting AI grounded in your transcripts.</p>
+        <div class="m-stack" style="gap:var(--space-s);">
+          <a class="ask-chip" href="skyagent.html"><span data-icon="Sparkle" data-size="16"></span> What action items did I get this week?</a>
+          <a class="ask-chip" href="skyagent.html"><span data-icon="Sparkle" data-size="16"></span> Summarize my meetings with my biggest customer</a>
+          <a class="ask-chip" href="skyagent.html"><span data-icon="Sparkle" data-size="16"></span> What did we decide about pricing?</a>
+        </div>
+        <div style="margin-top:var(--space-m);"><a class="link" href="skyagent.html">Open skyAgent</a></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="../assets/icons.js"></script>
+  <script src="mobile-app.js"></script>
+</body>
+</html>

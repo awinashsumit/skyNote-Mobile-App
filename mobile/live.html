@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>skyNote · Live</title>
+  <link rel="stylesheet" href="../app.css" />
+  <link rel="stylesheet" href="../skynote.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body data-theme="light" data-mback="conversations.html" data-mtitle="Live">
+  <div class="m-app">
+    <div class="m-content">
+      <h1 style="font-size:var(--fs-600);font-weight:var(--weight-semibold);">Manual launch</h1>
+      <div class="row" style="gap:var(--space-s);margin-top:var(--space-s);">
+        <span class="live-pill"><span class="ld"></span> Recording</span>
+        <span class="muted" style="font-size:var(--fs-200);">Teams · <span id="dur" class="num">0:32</span></span>
+      </div>
+      <div class="row" style="gap:var(--space-s);margin-top:var(--space-m);">
+        <button class="btn btn-secondary" style="flex:1;justify-content:center;"><span class="btn-icon" data-icon="Pause"></span> Pause</button>
+        <a class="btn btn-primary" href="conversation-detail.html" style="flex:1;justify-content:center;"><span class="btn-icon" data-icon="Checkmark"></span> Stop &amp; save</a>
+      </div>
+
+      <div class="lt-head" style="margin-top:var(--space-l);"><span class="live-pill"><span class="ld"></span> LIVE</span><span class="ch-title" style="font-size:var(--fs-400);">Transcript</span></div>
+      <section class="m-card">
+        <div class="lu-row" style="padding-top:0;"><span class="avatar is-sm">SA</span><div class="lu-main"><div class="lu-head2"><span class="lu-name">Sumit Awinash</span><span class="lu-time">0:14</span></div><div class="lu-text">let's walk through the OE sync agenda for today</div></div></div>
+        <div class="lu-row"><span class="avatar is-sm">SA</span><div class="lu-main"><div class="lu-head2"><span class="lu-name">Sumit Awinash</span><span class="lu-time">0:30</span></div><div class="lu-text">the file-share sync is the priority over a direct connector</div></div></div>
+        <div class="lu-row is-partial"><span class="avatar is-sm">KB</span><div class="lu-main"><div class="lu-head2"><span class="lu-name">Kishore Bhattacharjee</span><span class="lu-time">live</span></div><div class="lu-text">agreed, the connector adds too much overhead<span class="lu-caret"></span></div></div></div>
+      </section>
+
+      <div class="m-sectit"><span class="ch-icon" data-icon="Sparkle"></span><span class="mst-title">Ask skyAgent</span></div>
+      <div class="m-stack">
+        <button class="ask-chip"><span data-icon="Sparkle" data-size="16"></span> Summarize so far</button>
+        <button class="ask-chip"><span data-icon="Sparkle" data-size="16"></span> Action items so far</button>
+      </div>
+
+      <div class="m-sectit"><span class="mst-title">Participants</span><span class="ch-count">2</span></div>
+      <section class="m-card">
+        <div class="part-row" style="padding-top:0;"><span class="avatar is-sm">SA</span><span class="pr-name">Sumit Awinash</span><span class="status is-recorded"><span class="dot"></span> Joined</span></div>
+        <div class="part-row"><span class="avatar is-sm" style="background:var(--bg-inverted);">S</span><span class="pr-name">skyNote bot</span><span class="live-pill"><span class="ld"></span> Recording</span></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="../assets/icons.js"></script>
+  <script src="mobile-app.js"></script>
+  <script>
+    var s = 32, d = document.getElementById('dur');
+    setInterval(function () { s++; d.textContent = Math.floor(s / 60) + ':' + (s % 60 < 10 ? '0' : '') + (s % 60); }, 1000);
+  </script>
+</body>
+</html>

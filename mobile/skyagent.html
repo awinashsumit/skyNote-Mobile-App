@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>skyNote · skyAgent</title>
+  <link rel="stylesheet" href="../app.css" />
+  <link rel="stylesheet" href="../skynote.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body data-theme="light" data-mpage="skyagent" data-mtitle="skyAgent">
+  <div class="m-app">
+    <div class="m-content" style="padding-bottom:170px;">
+      <button class="scope-btn" data-sheet="scopeSheet" style="width:100%;justify-content:flex-start;">
+        <span class="sb-ic" data-icon="Globe" data-size="18"></span><span class="sb-label">Grounded in</span><span id="scopeName">All meetings</span><span style="margin-left:auto;" data-icon="Chevron Down" data-size="16"></span>
+      </button>
+
+      <div id="empty" class="agent-empty" style="margin-top:var(--space-xxl);">
+        <div class="ae-art" data-icon="Sparkle" data-size="24"></div>
+        <h2 style="font-size:var(--fs-500);">Ask about your meetings</h2>
+        <p style="font-size:var(--fs-200);">Answers are grounded in your transcripts, with citations you can jump to.</p>
+      </div>
+      <div class="m-stack" id="suggests" style="margin-top:var(--space-l);">
+        <button class="ask-chip" data-q="What action items did I get this week?"><span data-icon="Sparkle" data-size="16"></span> What action items did I get this week?</button>
+        <button class="ask-chip" data-q="What did we decide about pricing?"><span data-icon="Sparkle" data-size="16"></span> What did we decide about pricing?</button>
+        <button class="ask-chip" data-q="Summarize my biggest customer meetings"><span data-icon="Sparkle" data-size="16"></span> Summarize my biggest customer meetings</button>
+      </div>
+      <div id="messages"></div>
+    </div>
+
+    <div style="position:fixed;left:0;right:0;bottom:64px;max-width:430px;margin:0 auto;background:var(--bg-surface);border-top:var(--stroke-thin) solid var(--stroke-subtle);padding:var(--space-s) var(--space-l);z-index:15;">
+      <div class="ask-input"><input id="composer" placeholder="Ask about your meetings..." /><button class="send-btn" id="sendBtn" aria-label="Send"><span data-icon="Send" data-size="16"></span></button></div>
+    </div>
+  </div>
+
+  <!-- Scope sheet -->
+  <div class="m-sheet-ov" id="scopeSheet" hidden><div class="m-sheet">
+    <div class="m-sheet-handle"></div>
+    <div class="m-sheet-title">Ground answers in</div>
+    <div class="list" style="margin-top:var(--space-s);">
+      <div class="list-item is-selected" data-scope="All meetings"><span class="list-check" data-icon="Checkmark" data-size="16"></span><span data-icon="Globe" data-size="16"></span> All meetings</div>
+      <div class="list-item" data-scope="Best Practices and OE Sync"><span class="list-check"></span><span data-icon="Chat Multiple" data-size="16"></span> Best Practices and OE Sync</div>
+      <div class="list-item" data-scope="GPB - skyAdvisor Call"><span class="list-check"></span><span data-icon="Chat Multiple" data-size="16"></span> GPB - skyAdvisor Call</div>
+      <div class="list-item" data-scope="Deloitte Call"><span class="list-check"></span><span data-icon="Chat Multiple" data-size="16"></span> Deloitte Call</div>
+    </div>
+  </div></div>
+
+  <script src="../assets/icons.js"></script>
+  <script src="mobile-app.js"></script>
+  <script>
+    var scope = 'All meetings';
+    document.querySelectorAll('[data-scope]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        scope = el.getAttribute('data-scope');
+        document.getElementById('scopeName').textContent = scope;
+        document.querySelectorAll('[data-scope]').forEach(function (x) { x.classList.remove('is-selected'); x.querySelector('.list-check').innerHTML = ''; });
+        el.classList.add('is-selected'); el.querySelector('.list-check').innerHTML = window.micon('Checkmark', 16);
+        document.getElementById('scopeSheet').hidden = true;
+      });
+    });
+    function send(text) {
+      text = (text || document.getElementById('composer').value).trim(); if (!text) return;
+      document.getElementById('empty').hidden = true; document.getElementById('suggests').hidden = true;
+      var m = document.getElementById('messages');
+      m.insertAdjacentHTML('beforeend', '<div class="msg user"><div><div class="bubble">' + text.replace(/</g, '&lt;') + '</div><div class="grounding" style="justify-content:flex-end;"><span data-icon="Globe" data-size="12"></span> ' + scope + '</div></div></div>');
+      m.insertAdjacentHTML('beforeend', '<div class="msg assistant"><div><div class="bubble">Based on ' + scope.toLowerCase() + ', the team prioritized a file-share sync to ADLS over a direct connector, and flagged a SkyVoice lead-sync issue to resolve next. The cited moments below have the details.<div class="answer-cites"><a class="cite" href="conversation-detail.html">Best Practices and OE Sync <span class="ts">12:35</span></a></div></div></div></div>');
+      if (window.mhydrate) window.mhydrate(m);
+      document.getElementById('composer').value = '';
+      var c = document.querySelector('.m-content'); c.scrollTop = c.scrollHeight;
+    }
+    document.getElementById('sendBtn').addEventListener('click', function () { send(); });
+    document.getElementById('composer').addEventListener('keydown', function (e) { if (e.key === 'Enter') send(); });
+    document.querySelectorAll('#suggests [data-q]').forEach(function (b) { b.addEventListener('click', function () { send(b.getAttribute('data-q')); }); });
+  </script>
+</body>
+</html>
