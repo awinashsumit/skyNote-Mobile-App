@@ -141,6 +141,15 @@ html[data-theme="dark"] .m-appbar { background: var(--bg-subtle); border-bottom:
 .m-tbar .btn:active { background: var(--bg-surface-hover); }
 .m-tcount { display: block; font-size: var(--fs-200); color: var(--fg-tertiary); margin: var(--space-s) var(--space-xs) var(--space-l); }
 
+/* Calendar week strip */
+.cal-week { display: flex; gap: var(--space-xs); margin-top: var(--space-m); }
+.cal-day { flex: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-xxs);
+  padding: var(--space-s) 0; border-radius: var(--radius-lg); }
+.cal-day .cd-dow { font-size: var(--fs-100); color: var(--fg-tertiary); text-transform: uppercase; letter-spacing: .04em; }
+.cal-day .cd-num { font-size: var(--fs-300); font-weight: var(--weight-semibold); color: var(--fg-secondary); }
+.cal-day.is-today { background: var(--accent); }
+.cal-day.is-today .cd-dow, .cal-day.is-today .cd-num { color: var(--fg-on-accent); }
+
 /* Pill tabs (scrollable) */
 .m-tabs { display: flex; gap: var(--space-xs); overflow-x: auto; padding-bottom: var(--space-xs); scrollbar-width: none; }
 .m-tabs::-webkit-scrollbar { display: none; }

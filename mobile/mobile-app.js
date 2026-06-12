@@ -12,13 +12,13 @@
   }
   window.micon = icon;
 
-  // 5 bottom tabs (Settings is its own item; Capture lives in the top bar)
+  // 5 bottom tabs with a center amber Record button
   var NAV = [
-    { id: 'home',         label: 'Home',     icon: 'Home',                 href: 'home.html' },
-    { id: 'conversations',label: 'Meetings', icon: 'Chat Multiple',        href: 'conversations.html' },
-    { id: 'action-items', label: 'Tasks',    icon: 'Task List Square Ltr', href: 'action-items.html' },
-    { id: 'skyagent',     label: 'skyAgent', icon: 'Sparkle',              href: 'skyagent.html' },
-    { id: 'settings',     label: 'Settings', icon: 'Settings',             href: 'settings.html' }
+    { id: 'home',          label: 'Home',         icon: 'Home',          href: 'home.html' },
+    { id: 'conversations', label: 'Conversation', icon: 'Chat Multiple', href: 'conversations.html' },
+    { id: 'record',        label: 'Record',       icon: 'Mic',           href: 'live.html', fab: true },
+    { id: 'calendar',      label: 'Calendar',     icon: 'Calendar Ltr',  href: 'calendar.html' },
+    { id: 'skyagent',      label: 'skyAgent',     icon: 'Sparkle',       href: 'skyagent.html' }
   ];
 
   function applyTheme(t) {
@@ -53,6 +53,11 @@
 
   function tabBar(active) {
     return '<nav class="m-tabbar">' + NAV.map(function (n) {
+      if (n.fab) {
+        return '<a class="m-fab-wrap" href="' + n.href + '" aria-label="' + n.label + '">' +
+          '<span class="m-fab">' + icon(n.icon, 26) + '</span>' +
+          '<span class="m-fab-label">' + n.label + '</span></a>';
+      }
       var on = n.id === active;
       return '<a class="m-tab' + (on ? ' is-active' : '') + '" href="' + n.href + '">' +
         '<span class="m-tab-ic">' + icon(n.icon, 24) + '</span><span>' + n.label + '</span></a>';

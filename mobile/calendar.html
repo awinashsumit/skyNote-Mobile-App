@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>skyNote · Calendar</title>
+  <link rel="stylesheet" href="../app.css" />
+  <link rel="stylesheet" href="../skynote.css" />
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body data-theme="light" data-mpage="calendar" data-mtitle="Calendar">
+  <div class="m-app">
+    <div class="m-content">
+      <span class="m-eyebrow"><span class="e-dot"></span> June 2026</span>
+
+      <!-- Week strip -->
+      <div class="cal-week">
+        <span class="cal-day"><span class="cd-dow">Mon</span><span class="cd-num">8</span></span>
+        <span class="cal-day"><span class="cd-dow">Tue</span><span class="cd-num">9</span></span>
+        <span class="cal-day"><span class="cd-dow">Wed</span><span class="cd-num">10</span></span>
+        <span class="cal-day"><span class="cd-dow">Thu</span><span class="cd-num">11</span></span>
+        <span class="cal-day is-today"><span class="cd-dow">Fri</span><span class="cd-num">12</span></span>
+        <span class="cal-day"><span class="cd-dow">Sat</span><span class="cd-num">13</span></span>
+        <span class="cal-day"><span class="cd-dow">Sun</span><span class="cd-num">14</span></span>
+      </div>
+
+      <!-- Today -->
+      <div class="m-sectit"><span class="ch-icon" data-icon="Calendar Ltr"></span><span class="mst-title">Today</span><span class="muted num" style="margin-left:auto;font-size:var(--fs-200);">Fri 12 Jun</span></div>
+      <div class="m-stack">
+        <a class="m-row" href="live.html"><span class="m-lead is-soft" data-icon="Video" data-size="20"></span><span class="mr-body"><span class="mr-title">DDAC Readiness Review</span><span class="mr-sub">10:00 AM &middot; Teams &middot; 30 min</span><span class="mr-meta"><span class="status is-live"><span class="dot"></span> Starting soon</span></span></span><span class="btn btn-primary" style="flex:0 0 auto;height:30px;">Join</span></a>
+        <a class="m-row" href="conversation-detail.html"><span class="m-lead is-soft" data-icon="Video" data-size="20"></span><span class="mr-body"><span class="mr-title">SkyVoice Sync</span><span class="mr-sub">2:30 PM &middot; Zoom &middot; 45 min</span></span><span class="m-chev" data-icon="Chevron Right" data-size="18"></span></a>
+        <a class="m-row" href="conversation-detail.html"><span class="m-lead is-soft" data-icon="Video" data-size="20"></span><span class="mr-body"><span class="mr-title">Deloitte &mdash; MDM enrichment</span><span class="mr-sub">4:00 PM &middot; Teams &middot; 60 min</span></span><span class="m-chev" data-icon="Chevron Right" data-size="18"></span></a>
+      </div>
+
+      <!-- Tomorrow -->
+      <div class="m-sectit"><span class="ch-icon" data-icon="Calendar Ltr"></span><span class="mst-title">Tomorrow</span><span class="muted num" style="margin-left:auto;font-size:var(--fs-200);">Sat 13 Jun</span></div>
+      <div class="m-stack">
+        <a class="m-row" href="conversation-detail.html"><span class="m-lead is-soft" data-icon="Video" data-size="20"></span><span class="mr-body"><span class="mr-title">GPB &mdash; skyAdvisor follow-up</span><span class="mr-sub">11:00 AM &middot; Zoom &middot; 30 min</span></span><span class="m-chev" data-icon="Chevron Right" data-size="18"></span></a>
+        <a class="m-row" href="conversation-detail.html"><span class="m-lead is-soft" data-icon="Video" data-size="20"></span><span class="mr-body"><span class="mr-title">Weekly product standup</span><span class="mr-sub">3:00 PM &middot; Teams &middot; 25 min</span></span><span class="m-chev" data-icon="Chevron Right" data-size="18"></span></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/icons.js"></script>
+  <script src="mobile-app.js"></script>
+</body>
+</html>
