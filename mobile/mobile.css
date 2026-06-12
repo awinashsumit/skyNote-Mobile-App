@@ -43,16 +43,19 @@ html[data-theme="dark"] .m-appbar { background: var(--bg-subtle); border-bottom:
 .m-content { flex: 1; overflow-y: auto; padding: var(--space-l); padding-bottom: 96px; background: var(--bg-surface); }
 .m-content.flush { padding: 0 0 96px; }
 
-/* Bottom tab bar with center FAB */
+/* Bottom tab bar — icon-only, inline square Record button */
 .m-tabbar { position: fixed; left: 0; right: 0; bottom: 0; max-width: 430px; margin: 0 auto; height: 64px; z-index: 20;
   background: var(--bg-surface); border-top: var(--stroke-thin) solid var(--stroke-subtle); display: flex; align-items: center;
-  padding: 6px var(--space-xs) 0; box-shadow: 0 -2px 12px rgba(0,0,0,.04); }
-.m-tab { display: flex; flex-direction: column; align-items: center; gap: 3px; color: var(--fg-tertiary); font-size: 10px; font-weight: var(--weight-semibold);
-  text-decoration: none; flex: 1; }
-.m-tab .m-tab-ic { display: inline-flex; align-items: center; justify-content: center; height: 30px; padding: 0 16px; border-radius: var(--radius-circular); transition: background .12s ease-out; }
+  padding: 0 var(--space-s); box-shadow: 0 -2px 12px rgba(0,0,0,.04); }
+.m-tab { display: flex; align-items: center; justify-content: center; flex: 1; color: var(--fg-tertiary); text-decoration: none; }
+.m-tab .m-tab-ic { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 38px; border-radius: var(--radius-lg); transition: background .12s ease-out; }
 .m-tab .m-tab-ic svg { width: 24px; height: 24px; }
 .m-tab.is-active { color: var(--accent); }
 .m-tab.is-active .m-tab-ic { background: var(--accent-bg-soft); }
+/* Center Record button (filled brand square, inline) */
+.m-tab-rec .m-rec-btn { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px;
+  border-radius: var(--radius-lg); background: var(--accent); color: var(--fg-on-accent); box-shadow: var(--shadow-4); }
+.m-tab-rec .m-rec-btn svg { width: 24px; height: 24px; }
 
 /* Top-bar capture button */
 .m-capture { width: 36px; height: 36px; border-radius: var(--radius-circular); background: var(--accent); color: var(--fg-on-accent);
