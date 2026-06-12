@@ -141,6 +141,9 @@ html[data-theme="dark"] .m-appbar { background: var(--bg-subtle); border-bottom:
 .m-tbar .btn:active { background: var(--bg-surface-hover); }
 .m-tcount { display: block; font-size: var(--fs-200); color: var(--fg-tertiary); margin: var(--space-s) var(--space-xs) var(--space-l); }
 
+/* skyAgent ask chips — flat on mobile (no border / radius) */
+.m-app .ask-chip { border: 0; border-radius: 0; }
+
 /* Calendar week strip */
 .cal-week { display: flex; gap: var(--space-xs); margin-top: var(--space-m); }
 .cal-day { flex: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-xxs);
