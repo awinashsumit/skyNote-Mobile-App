@@ -37,7 +37,7 @@
   function appBar() {
     var back = document.body.getAttribute('data-mback');
     var title = document.body.getAttribute('data-mtitle') || '';
-    var plus = '<button class="m-iconbtn" data-capture aria-label="Capture a meeting">' + icon('Add', 24) + '</button>';
+    var plus = '<button class="m-capture" data-capture aria-label="Capture a meeting">' + icon('Add', 22) + '</button>';
     if (back) {
       return '<header class="m-appbar"><a class="m-iconbtn" href="' + back + '" aria-label="Back">' + icon('Chevron Left', 22) + '</a>' +
         '<span class="m-title">' + title + '</span><span class="m-spacer"></span>' + plus + '</header>';
