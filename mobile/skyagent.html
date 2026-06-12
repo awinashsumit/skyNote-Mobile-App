@@ -10,7 +10,7 @@
 </head>
 <body data-theme="light" data-mpage="skyagent" data-mtitle="skyAgent">
   <div class="m-app">
-    <div class="m-content" style="padding-bottom:170px;">
+    <div class="m-content" style="padding-bottom:190px;">
       <button class="scope-btn" data-sheet="scopeSheet" style="width:100%;justify-content:flex-start;">
         <span class="sb-ic" data-icon="Globe" data-size="18"></span><span class="sb-label">Grounded in</span><span id="scopeName">All meetings</span><span style="margin-left:auto;" data-icon="Chevron Down" data-size="16"></span>
       </button>
@@ -28,7 +28,7 @@
       <div id="messages"></div>
     </div>
 
-    <div style="position:fixed;left:0;right:0;bottom:64px;max-width:430px;margin:0 auto;background:var(--bg-surface);border-top:var(--stroke-thin) solid var(--stroke-subtle);padding:var(--space-s) var(--space-l);z-index:15;">
+    <div style="position:fixed;left:0;right:0;bottom:calc(64px + var(--space-xl));max-width:430px;margin:0 auto;background:var(--bg-surface);border-top:var(--stroke-thin) solid var(--stroke-subtle);padding:var(--space-s) var(--space-l);z-index:15;">
       <div class="ask-input"><input id="composer" placeholder="Ask about your meetings..." /><button class="send-btn" id="sendBtn" aria-label="Send"><span data-icon="Send" data-size="16"></span></button></div>
     </div>
   </div>
