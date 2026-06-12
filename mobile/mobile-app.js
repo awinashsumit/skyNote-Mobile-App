@@ -73,8 +73,8 @@
 
   function accountSheet() {
     function ext(label) { return '<a class="acct-link" href="#">' + label + icon('Open', 18) + '</a>'; }
-    return '<div class="m-sheet-ov is-full" id="accountSheet" hidden><div class="m-sheet m-sheet-full" role="dialog" aria-label="Account">' +
-      '<div class="m-fullhead"><button class="m-iconbtn" data-close aria-label="Close">' + icon('Chevron Left', 22) + '</button><span class="m-sheet-title">Account</span></div>' +
+    return '<div class="m-sheet-ov" id="accountSheet" hidden><div class="m-sheet" role="dialog" aria-label="Account">' +
+      '<div class="m-sheet-handle"></div>' +
       '<div class="acct-head"><span class="avatar" style="width:48px;height:48px;font-size:var(--fs-400);">SA</span><div><div class="acct-name">Sumit Awinash</div><div class="acct-mail">sumit.awinash@skypointcloud.com</div><a class="link" href="settings.html">View profile</a></div></div>' +
       '<hr class="divider" />' +
       '<div class="field"><label class="field-label">Tenant</label><span class="dropdown" style="width:100%;">Skypoint Production <span class="dropdown-chevron">' + icon('Chevron Down', 20) + '</span></span></div>' +
