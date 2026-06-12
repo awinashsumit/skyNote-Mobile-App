@@ -40,7 +40,7 @@ html[data-theme="dark"] .m-appbar { background: var(--bg-subtle); border-bottom:
 .m-appbar .avatar { width: 30px; height: 30px; }
 
 /* Content */
-.m-content { flex: 1; overflow-y: auto; padding: var(--space-l); padding-bottom: 96px; }
+.m-content { flex: 1; overflow-y: auto; padding: var(--space-l); padding-bottom: 96px; background: var(--bg-surface); }
 .m-content.flush { padding: 0 0 96px; }
 
 /* Bottom tab bar with center FAB */
