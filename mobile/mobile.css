@@ -99,7 +99,7 @@ html[data-theme="dark"] .m-appbar { background: var(--bg-subtle); border-bottom:
   letter-spacing: .06em; text-transform: uppercase; color: var(--fg-subtle); }
 .m-eyebrow .e-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 .m-sectit { display: flex; align-items: center; gap: var(--space-s); margin: var(--space-xxl) 0 var(--space-m); }
-.m-sectit .ch-icon { width: 18px; height: 18px; color: var(--accent); display: inline-flex; }
+.m-sectit .ch-icon { display: none; }
 .m-sectit .mst-title { font-size: var(--fs-500); line-height: var(--lh-500); font-weight: var(--weight-semibold); }
 .m-sectit .link { margin-left: auto; font-size: var(--fs-200); }
 .m-stack { display: flex; flex-direction: column; gap: var(--space-m); }
