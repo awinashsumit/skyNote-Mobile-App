@@ -37,16 +37,17 @@
   function appBar() {
     var back = document.body.getAttribute('data-mback');
     var title = document.body.getAttribute('data-mtitle') || '';
+    var plus = '<button class="m-iconbtn" data-capture aria-label="Capture a meeting">' + icon('Add', 24) + '</button>';
     if (back) {
       return '<header class="m-appbar"><a class="m-iconbtn" href="' + back + '" aria-label="Back">' + icon('Chevron Left', 22) + '</a>' +
-        '<span class="m-title">' + title + '</span><span class="m-spacer"></span>' +
-        '<button class="m-iconbtn" data-account aria-label="Account"><span class="avatar">SA</span></button></header>';
+        '<span class="m-title">' + title + '</span><span class="m-spacer"></span>' + plus + '</header>';
     }
     return '<header class="m-appbar">' +
-      (title ? '<span class="m-title">' + title + '</span>' : '<img class="m-logo" src="../assets/skynote-light.svg" alt="skyNote" />') +
+      '<button class="m-iconbtn" data-account aria-label="Menu">' + icon('Line Horizontal 3', 24) + '</button>' +
+      (title ? '<span class="m-title" style="margin-left:var(--space-xs);">' + title + '</span>' : '') +
       '<span class="m-spacer"></span>' +
       '<button class="m-iconbtn" aria-label="Search">' + icon('Search', 22) + '</button>' +
-      '<button class="m-iconbtn" data-account aria-label="Account"><span class="avatar">SA</span></button>' +
+      plus +
       '</header>';
   }
 
